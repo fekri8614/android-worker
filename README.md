@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkManagerExample</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    code {
+      background-color: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #282c34;
+      color: #abb2bf;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>WorkManagerExample 🚀</h1>
+      <p>A hands-on Android project demonstrating the use of <strong>WorkManager</strong> for background tasks.</p>
+      <div>
+        <span class="badge">Android</span>
+        <span class="badge">Kotlin</span>
+        <span class="badge">WorkManager</span>
+      </div>
+    </header>
+
+    <!-- Description -->
+    <section class="section">
+      <h2>📖 Description</h2>
+      <p>
+        This project is an exercise to explore the capabilities of <strong>WorkManager</strong> in Android. WorkManager is a powerful library for managing deferrable and guaranteed background tasks, even if the app is closed or the device restarts.
+      </p>
+      <p>
+        The project includes examples of:
+        <ul>
+          <li>One-time tasks</li>
+          <li>Periodic tasks</li>
+          <li>Chained tasks</li>
+          <li>Task constraints (e.g., network, charging)</li>
+        </ul>
+      </p>
+    </section>
+
+    <!-- Dependencies -->
+    <section class="section">
+      <h2>📦 Dependencies</h2>
+      <p>
+        This project uses the following dependencies, managed via <code>libs.versions.toml</code>:
+      </p>
+      <pre><code>
+[versions]
+agp = "8.3.0"
+kotlin = "1.9.0"
+coreKtx = "1.15.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.8.0"
+composeBom = "2024.04.01"
+work = "2.9.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-work-runtime = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+      </code></pre>
+      <p>
+        You can view the full <code>libs.versions.toml</code> file <a href="https://github.com/your-username/WorkManagerExample/blob/main/libs.versions.toml" target="_blank">here</a>.
+      </p>
+    </section>
+
+    <!-- Setup -->
+    <section class="section">
+      <h2>🛠️ Setup</h2>
+      <p>To run this project locally, follow these steps:</p>
+      <ol>
+        <li>Clone the repository:
+          <pre><code>git clone https://github.com/your-username/WorkManagerExample.git</code></pre>
+        </li>
+        <li>Open the project in Android Studio.</li>
+        <li>Sync the project with Gradle files.</li>
+        <li>Build and run the app on an emulator or physical device.</li>
+      </ol>
+    </section>
+
+    <!-- Contributing -->
+    <section class="section">
+      <h2>🤝 Contributing</h2>
+      <p>
+        Contributions are welcome! If you'd like to contribute, please follow these steps:
+        <ol>
+          <li>Fork the repository.</li>
+          <li>Create a new branch (<code>git checkout -b feature/YourFeatureName</code>).</li>
+          <li>Commit your changes (<code>git commit -m 'Add some feature'</code>).</li>
+          <li>Push to the branch (<code>git push origin feature/YourFeatureName</code>).</li>
+          <li>Open a pull request.</li>
+        </ol>
+      </p>
+    </section>
+
+    <!-- License -->
+    <section class="section">
+      <h2>📄 License</h2>
+      <p>This project is licensed under the MIT License. See the <a href="https://github.com/your-username/WorkManagerExample/blob/main/LICENSE" target="_blank">LICENSE</a> file for details.</p>
+    </section>
+  </div>
+</body>
+</html>
